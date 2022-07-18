@@ -32,7 +32,7 @@ async function formatFiles(files) {
   let formatedData = [];
   // Loop files
   for (let i = 0; i < files.length; i++) {
-    let dataArray = [];
+    let dataArray = {};
     // Loop to verify if exists data
     if (files[i].data.length > 1) {
       // Loop the data
@@ -46,11 +46,11 @@ async function formatFiles(files) {
           dataSplitted[2] &&
           dataSplitted[3]
         ) {
-          dataArray.push({
+          dataArray = {
             text: dataSplitted[1],
             number: dataSplitted[2],
             hex: dataSplitted[3],
-          });
+          };
 
           formatedData.push({
             file: files[i].file,
@@ -58,7 +58,7 @@ async function formatFiles(files) {
           });
         }
 
-        dataArray = [];
+        dataArray = {};
       } // End loop
     } // End if
   } // End loop
@@ -93,5 +93,4 @@ var controller = {
       });
   },
 }; // end controller
-
 module.exports = controller;
