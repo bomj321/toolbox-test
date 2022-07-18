@@ -25,7 +25,7 @@ const Files = () => {
         setLoading(false);
       })
       .catch(() => {
-        toastr.error('Hubo un error al obtener los personajes.');
+        toastr.error('An error was ocurred');
         setLoading(false);
       });
   };
