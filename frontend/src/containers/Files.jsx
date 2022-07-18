@@ -45,7 +45,7 @@ const Files = () => {
             <Container>
               <Row className="mt-4">
                 <Col>
-                  <Table striped bordered hover>
+                  <Table striped bordered hover responsive>
                     <thead>
                       <tr>
                         <th>File Name</th>
