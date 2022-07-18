@@ -19,7 +19,6 @@ const Files = () => {
 
   const getFiles = () => {
     setLoading(true);
-
     FileService.getFiles()
       .then((response) => {
         setItems(response.data.files);

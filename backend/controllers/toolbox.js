@@ -9,6 +9,8 @@ const config = {
   },
 };
 
+// Externals functions
+
 async function requestFiles(filesArray) {
   let filesDataArray = [];
 
@@ -66,13 +68,9 @@ async function formatFiles(files) {
   return formatedData;
 }
 
-var controller = {
-  test: (req, res) => {
-    return res.status(200).send({
-      message: "Test route",
-    });
-  },
+// Externals functions
 
+var controller = {
   files: (req, res) => {
     axios
       .get(`${url}/secret/files`, config)
@@ -86,7 +84,7 @@ var controller = {
           files: filesFormatted,
         });
       })
-      .catch(function (error) {
+      .catch(function () {
         return res.status(500).send({
           message: "Internal server error",
         });

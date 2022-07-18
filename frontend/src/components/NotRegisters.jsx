@@ -7,7 +7,7 @@ const NotRegisters = () => {
   return (
     <div className="div-not-registers">
       <MehOutlined />
-      <h6>No hay registros</h6>
+      <h2 className="mt-2">No hay registros</h2>
     </div>
   );
 };
